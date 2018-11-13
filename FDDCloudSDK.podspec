@@ -9,7 +9,7 @@ s.homepage     = "http://www.fangdd.com/shanghai"
 s.license      = { :type => "MIT", :file => "LICENSE" }
 s.author       = { "liuzhipeng" => "liuzhipeng@fangdd.com" }
 s.platform     =  :ios, '8.0'
-s.source       =  { :git => 'http://gitlab.esf.fangdd.net/ershoufang_mobile/IMIOSSDK.git', :tag => s.version}
+s.source       =  { :git => 'https://github.com/lzpWhite/FDDCloudSDK.git', :tag => s.version}
 s.framework    = 'UIKit', 'WebKit'
 s.vendored_frameworks = "FDDCloudSDK.framework"
 s.requires_arc = true
