@@ -1,0 +1,35 @@
+PODS:
+  - Alamofire (4.7.3)
+  - FDDCloudSDK (0.0.1):
+    - Alamofire
+    - ObjectMapper
+    - SwiftyJSON
+    - WebViewJavascriptBridge
+  - ObjectMapper (3.3.0)
+  - SwiftyJSON (4.2.0)
+  - WebViewJavascriptBridge (6.0.3)
+
+DEPENDENCIES:
+  - FDDCloudSDK (from `./../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - ObjectMapper
+    - SwiftyJSON
+    - WebViewJavascriptBridge
+
+EXTERNAL SOURCES:
+  FDDCloudSDK:
+    :path: "./../"
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  FDDCloudSDK: b2372bd7a0a09d71012ba16ec70202cb823dc46d
+  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+  WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
+
+PODFILE CHECKSUM: 2ce4afaf730aa7c3e9d16bc0f0cf667d5a2e1ca2
+
+COCOAPODS: 1.5.3

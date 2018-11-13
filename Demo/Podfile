@@ -1,0 +1,13 @@
+source 'https://github.com/CocoaPods/Specs.git'
+source 'http://gitlab.esf.fangdd.net/ios/Specs.git'
+
+platform :ios, "8.0"
+use_frameworks!
+
+project 'Demo'
+
+target 'Demo' do
+
+    pod 'FDDCloudSDK', :path => './../'
+
+end

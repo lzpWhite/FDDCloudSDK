@@ -1,0 +1,11 @@
+framework module FDDCloudSDK {
+  umbrella header "FDDCloudSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module FDDCloudSDK.Swift {
+    header "FDDCloudSDK-Swift.h"
+    requires objc
+}
