@@ -13,12 +13,15 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // 设置环境 默认正式环境
         FDDCloudManager.setServerType(serverType: .test)
-        FDDCloudManager.registKey(key: "b25zIENlcnRpZmlj")
+        // 初始化SDK
+        FDDCloudManager.registKey(key: "xxxx")
         // Do any additional setup after loading the view, typically from a nib.
     }
 
     @IBAction func cleanAction(_ sender: Any) {
+        // 退出登录调用
         FDDCloudManager.logOut()
     }
     @IBAction func loginAction(_ sender: Any) {
