@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         // 设置环境 默认正式环境
         FDDCloudManager.setServerType(serverType: .test)
         // 初始化SDK
-        FDDCloudManager.registKey(key: "xxxx")
+        FDDCloudManager.registKey(key: "b25zIENlcnRpZmlj")
         // Do any additional setup after loading the view, typically from a nib.
     }
 

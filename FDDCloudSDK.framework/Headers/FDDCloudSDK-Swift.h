@@ -198,6 +198,12 @@ SWIFT_CLASS("_TtC11FDDCloudSDK15FDDCloudManager")
 /// 测试  test = 2
 ///
 + (void)setServerTypeWithServerType:(enum FDDServerType)serverType;
+/// 通过url获取vc
+/// \param url 目标链接
+///
+///
+/// returns:
+/// vc
 + (UIViewController * _Nullable)getHomeVCWithUrl:(NSString * _Nonnull)url SWIFT_WARN_UNUSED_RESULT;
 /// 获取跳转的页面
 /// \param action 页面路由名字
