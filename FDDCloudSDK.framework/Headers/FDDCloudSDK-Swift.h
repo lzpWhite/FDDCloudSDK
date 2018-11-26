@@ -204,7 +204,7 @@ SWIFT_CLASS("_TtC11FDDCloudSDK15FDDCloudManager")
 ///
 /// returns:
 /// vc
-+ (UIViewController * _Nullable)getHomeVCWithUrl:(NSString * _Nonnull)url SWIFT_WARN_UNUSED_RESULT;
++ (UIViewController * _Nullable)getVCWith:(NSString * _Nonnull)url SWIFT_WARN_UNUSED_RESULT;
 /// 获取跳转的页面
 /// \param action 页面路由名字
 ///
@@ -282,6 +282,11 @@ typedef SWIFT_ENUM(NSInteger, FDDServerType, closed) {
 
 
 
+
+
+@interface UIWindow (SWIFT_EXTENSION(FDDCloudSDK))
++ (UIWindow * _Nonnull)defaultNormalLevel SWIFT_WARN_UNUSED_RESULT;
+@end
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop

@@ -11,6 +11,7 @@ import FDDCloudSDK
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textFile: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // 设置环境 默认正式环境
@@ -34,12 +35,18 @@ class ViewController: UIViewController {
         publichAction("estate", diac: ["id":"6252623"])
     }
     @IBAction func homeAction(_ sender: Any) {
-        if let vc = FDDCloudManager.getHomeVC(url: "http://10.12.14.152:3000/a.html") {
+        if let vc = FDDCloudManager.getVC(with: "http://d.fangdd.com/jsbridge") {
             let nc = UINavigationController(rootViewController: vc)
             self.present(nc, animated: false, completion: nil)
         }
     }
 
+    @IBAction func inputClick(_ sender: Any) {
+        if let str = textFile.text, str.isEmpty == false,  let vc = FDDCloudManager.getVC(with: str) {
+            let nc = UINavigationController(rootViewController: vc)
+            self.present(nc, animated: false, completion: nil)
+        }
+    }
     func publichAction(_ action: String, diac: [String: String] = [:]) {
 
         if let vc = FDDCloudManager.getActionVC(action: action, paths: diac) {
