@@ -184,6 +184,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 enum FDDServerType : NSInteger;
 @class UIViewController;
+enum FDDCloudShareType : NSInteger;
+@class FDDCloudShareDataEntity;
 
 SWIFT_CLASS("_TtC11FDDCloudSDK15FDDCloudManager")
 @interface FDDCloudManager : NSObject
@@ -218,6 +220,10 @@ SWIFT_CLASS("_TtC11FDDCloudSDK15FDDCloudManager")
 + (UIViewController * _Nullable)getActionVCWithAction:(NSString * _Nonnull)action paths:(NSDictionary<NSString *, NSString *> * _Nullable)paths query:(NSDictionary<NSString *, NSString *> * _Nullable)query SWIFT_WARN_UNUSED_RESULT;
 /// 退出登录清理数据
 + (void)logOut;
+/// 分享实现
+/// \param block 分享block 第一个参数为分享类型  第二个参数为分享数据源
+///
++ (void)shareEventBlockWithBlock:(void (^ _Nonnull)(enum FDDCloudShareType, FDDCloudShareDataEntity * _Nullable))block;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 

@@ -18,6 +18,11 @@ class ViewController: UIViewController {
         FDDCloudManager.setServerType(serverType: .test)
         // 初始化SDK
         FDDCloudManager.registKey(key: "b25zIENlcnRpZmlj")
+
+        FDDCloudManager.shareEventBlock { (type, _) in
+            print(type.rawValue)
+        }
+
         // Do any additional setup after loading the view, typically from a nib.
     }
 
