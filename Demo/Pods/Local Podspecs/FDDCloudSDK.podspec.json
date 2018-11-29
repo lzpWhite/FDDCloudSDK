@@ -1,6 +1,6 @@
 {
   "name": "FDDCloudSDK",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "summary": "FDDCloudSDK.FrameWork.",
   "homepage": "http://www.fangdd.com/shanghai",
   "license": "MIT",
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/lzpWhite/FDDCloudSDK.git",
-    "tag": "0.0.1"
+    "tag": "0.0.4"
   },
   "frameworks": [
     "UIKit",
