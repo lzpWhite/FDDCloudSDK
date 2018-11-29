@@ -47,11 +47,19 @@ class ViewController: UIViewController {
     }
 
     @IBAction func inputClick(_ sender: Any) {
-        if let str = textFile.text, str.isEmpty == false,  let vc = FDDCloudManager.getVC(with: str) {
-            let nc = UINavigationController(rootViewController: vc)
-            self.present(nc, animated: false, completion: nil)
+        if let str = textFile.text, str.isEmpty == false {
+            if str.hasPrefix("http"), let vc = FDDCloudManager.getVC(with: str) {
+                let nc = UINavigationController(rootViewController: vc)
+                self.present(nc, animated: false, completion: nil)
+            } else {
+                if let vc = FDDCloudManager.getActionVC(action: str) {
+                    let nc = UINavigationController(rootViewController: vc)
+                    self.present(nc, animated: false, completion: nil)
+                }
+            }
         }
     }
+
     func publichAction(_ action: String, diac: [String: String] = [:]) {
 
         if let vc = FDDCloudManager.getActionVC(action: action, paths: diac) {
