@@ -19,7 +19,20 @@ class ViewController: UIViewController {
         // 初始化SDK
         FDDCloudManager.registKey(key: "b25zIENlcnRpZmlj")
 
-        FDDCloudManager.shareEventBlock { (type, _) in
+        FDDCloudManager.shareEventBlock { (type, model) in
+            if type == FDDCloudShareType.wechatSession {
+                // 分享到好友
+                print("title  : \(model?.hlinkWechatTitle ?? "")")
+                print("content: \(model?.hlinkWechatSummary ?? "")")
+                print("url    : \(model?.hlink ?? "")")
+                print("icon   : \(model?.hlinkPicUrl ?? "")")
+
+            } else if type == FDDCloudShareType.wechatTimeLine {
+                // 分享到朋友圈
+                print("title  : \(model?.hlinkWechatTitle ?? "")")
+                print("url    : \(model?.hlink ?? "")")
+                print("icon   : \(model?.hlinkPicUrl ?? "")")
+            }
             print(type.rawValue)
         }
 
