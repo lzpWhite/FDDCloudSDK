@@ -42,7 +42,7 @@
                                     <action selector="cleanAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Y4-gr-lRW"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://10.12.14.159:3000/login.html" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3nN-5o-hc8">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="home" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3nN-5o-hc8">
                                 <rect key="frame" x="68" y="178" width="247" height="30"/>
                                 <color key="backgroundColor" red="0.97947226730000003" green="1" blue="0.5882949516" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
