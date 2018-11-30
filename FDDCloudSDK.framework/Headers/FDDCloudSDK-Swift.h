@@ -189,6 +189,10 @@ enum FDDCloudShareType : NSInteger;
 
 SWIFT_CLASS("_TtC11FDDCloudSDK15FDDCloudManager")
 @interface FDDCloudManager : NSObject
+/// 登录成功或者有FDD用户ID时候设置
+/// \param userId fddUserId
+///
++ (void)setFddUserIdWithUserId:(NSInteger)userId;
 /// 初始化注册SDK
 /// \param key key
 ///
@@ -256,20 +260,12 @@ typedef SWIFT_ENUM(NSInteger, FDDCloudShareType, closed) {
   FDDCloudShareTypeWechatSession = 11,
 /// 分享朋友圈
   FDDCloudShareTypeWechatTimeLine = 21,
-/// 朋友圈二次菜单
-  FDDCloudShareTypeWecahtTileLineSecond = 24,
 /// 分享朋友圈只有图片
   FDDCloudShareTypeWechatTimeLineOnleImage = 23,
 /// 复制链接
   FDDCloudShareTypeCopy = 41,
 /// 短信
   FDDCloudShareTypeSms = 31,
-/// 打开微信小程序
-  FDDCloudShareTypeOpenWechtMini = 8,
-/// 房多多IM
-  FDDCloudShareTypeFddIM = 51,
-/// 海报
-  FDDCloudShareTypeSharePoster = 61,
 };
 
 typedef SWIFT_ENUM(NSInteger, FDDServerType, closed) {
