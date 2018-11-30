@@ -1,5 +1,5 @@
 framework module FDDCloudSDK {
-  umbrella header "FDDCloudSDK.h"
+  umbrella header "FDDCloudSDK-umbrella.h"
 
   export *
   module * { export * }

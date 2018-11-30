@@ -1,12 +1,14 @@
 PODS:
   - Alamofire (4.8.0)
-  - FDDCloudSDK (0.0.4):
+  - FDDCloudSDK (0.0.6):
     - Alamofire
     - ObjectMapper
     - SwiftyJSON
+    - Toast-Swift
     - WebViewJavascriptBridge
   - ObjectMapper (3.4.1)
   - SwiftyJSON (4.2.0)
+  - Toast-Swift (4.0.1)
   - WebViewJavascriptBridge (6.0.3)
 
 DEPENDENCIES:
@@ -17,6 +19,7 @@ SPEC REPOS:
     - Alamofire
     - ObjectMapper
     - SwiftyJSON
+    - Toast-Swift
     - WebViewJavascriptBridge
 
 EXTERNAL SOURCES:
@@ -25,9 +28,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
-  FDDCloudSDK: b3e2c14aa686458d78c78373deb3f5bd6c827de3
+  FDDCloudSDK: 448eb1475bf08d5965293e41d6874f826a798e6f
   ObjectMapper: 5311bd50ca732930959e7ca1a2de43ab823a5ced
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+  Toast-Swift: e42a638589a2f95036b4bb7626cfbdde7daf0393
   WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
 
 PODFILE CHECKSUM: 2ce4afaf730aa7c3e9d16bc0f0cf667d5a2e1ca2

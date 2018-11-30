@@ -20,3 +20,5 @@ FOUNDATION_EXPORT const unsigned char FDDCloudSDKVersionString[];
 #import <CommonCrypto/CommonDigest.h>
 #import <CommonCrypto/CommonHMAC.h>
 #import <zlib.h>
+#import <WebViewJavascriptBridge/WebViewJavascriptBridge.h>
+#import <WebViewJavascriptBridge/WKWebViewJavascriptBridge.h>
