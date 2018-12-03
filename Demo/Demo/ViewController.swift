@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // 设置环境 默认正式环境
-        FDDCloudManager.setServerType(serverType: .test)
+        FDDCloudManager.setServerType(serverType: .production)
         // 初始化SDK
         FDDCloudManager.registKey(key: "b25zIENlcnRpZmlj")
 
