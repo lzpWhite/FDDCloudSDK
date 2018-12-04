@@ -31,9 +31,9 @@ let vc = FDDCloudManager.getActionVC(action: String, paths: [String : String]? =
 /// 获取跳转的页面
 ///
 /// - Parameters:
-///   - action: 页面的名称
+///   - action: 页面的Url
 /// - Returns: 返回VC，未获取到页面时为空
-let vc = FDDCloudManager.getActionVC(action: "home")
+let vc = FDDCloudManager.getHomeVC(url: "url")
 ```
 4. 退出登录调用
 ```
