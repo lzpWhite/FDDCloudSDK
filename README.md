@@ -31,11 +31,31 @@ let vc = FDDCloudManager.getActionVC(action: String, paths: [String : String]? =
 /// 获取跳转的页面
 ///
 /// - Parameters:
-///   - action: 页面的Url
+///   - action: 页面的名称
 /// - Returns: 返回VC，未获取到页面时为空
-let vc = FDDCloudManager.getHomeVC(url: "url")
+let vc = FDDCloudManager.getActionVC(action: "home")
 ```
 4. 退出登录调用
 ```
 FDDCloudManager.logOut()
+```
+
+5. 微信原生分享
+```
+FDDCloudManager.shareEventBlock { (type, model) in
+    if type == FDDCloudShareType.wechatSession {
+        // 分享到好友
+        print("title  : \(model?.hlinkWechatTitle ?? "")")
+        print("content: \(model?.hlinkWechatSummary ?? "")")
+        print("url    : \(model?.hlink ?? "")")
+        print("icon   : \(model?.hlinkPicUrl ?? "")")
+
+    } else if type == FDDCloudShareType.wechatTimeLine {
+        // 分享到朋友圈
+        print("title  : \(model?.hlinkWechatTitle ?? "")")
+        print("url    : \(model?.hlink ?? "")")
+        print("icon   : \(model?.hlinkPicUrl ?? "")")
+    }
+    print(type.rawValue)
+}
 ```
