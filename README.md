@@ -8,14 +8,19 @@ pod 'FDDCloudSDK'
 
 # 使用方法
 ### 需要通过bundid注册 对应的Key
-1.   注册
+1. 环境
+```
+// 设置环境 默认正式环境
+FDDCloudManager.setServerType(serverType: .production)
+```
+2.   注册
 ```
 /// 初始化注册SDK
 ///
 /// - Parameter key: key
- FDDCloudManager.registKey(key: "xxxx")
+FDDCloudManager.registKey(key: "xxxx")
 ```
-2. 获取对应ViewController
+3. 获取对应ViewController
 ```
 /// 获取跳转的页面
 ///
@@ -26,7 +31,7 @@ pod 'FDDCloudSDK'
 /// - Returns: 返回对应的VC，未获取到页面时为空
 let vc = FDDCloudManager.getActionVC(action: String, paths: [String : String]? = nil, query: [String: String]? = nil)
 ```
-3. 通过url获取ViewController
+4. 通过url获取ViewController
 ```
 /// 获取跳转的页面
 ///
@@ -35,27 +40,27 @@ let vc = FDDCloudManager.getActionVC(action: String, paths: [String : String]? =
 /// - Returns: 返回VC，未获取到页面时为空
 let vc = FDDCloudManager.getHomeVC(url: "url")
 ```
-4. 退出登录调用
+5. 退出登录调用
 ```
 FDDCloudManager.logOut()
 ```
 
-5. 微信原生分享
+6. 微信原生分享
 ```
 FDDCloudManager.shareEventBlock { (type, model) in
-    if type == FDDCloudShareType.wechatSession {
-        // 分享到好友
-        print("title  : \(model?.hlinkWechatTitle ?? "")")
-        print("content: \(model?.hlinkWechatSummary ?? "")")
-        print("url    : \(model?.hlink ?? "")")
-        print("icon   : \(model?.hlinkPicUrl ?? "")")
+if type == FDDCloudShareType.wechatSession {
+// 分享到好友
+print("title  : \(model?.hlinkWechatTitle ?? "")")
+print("content: \(model?.hlinkWechatSummary ?? "")")
+print("url    : \(model?.hlink ?? "")")
+print("icon   : \(model?.hlinkPicUrl ?? "")")
 
-    } else if type == FDDCloudShareType.wechatTimeLine {
-        // 分享到朋友圈
-        print("title  : \(model?.hlinkWechatTitle ?? "")")
-        print("url    : \(model?.hlink ?? "")")
-        print("icon   : \(model?.hlinkPicUrl ?? "")")
-    }
-    print(type.rawValue)
+} else if type == FDDCloudShareType.wechatTimeLine {
+// 分享到朋友圈
+print("title  : \(model?.hlinkWechatTitle ?? "")")
+print("url    : \(model?.hlink ?? "")")
+print("icon   : \(model?.hlinkPicUrl ?? "")")
+}
+print(type.rawValue)
 }
 ```
