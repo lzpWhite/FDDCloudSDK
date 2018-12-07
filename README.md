@@ -20,7 +20,11 @@ FDDCloudManager.setServerType(serverType: .production)
 /// - Parameter key: key
 FDDCloudManager.registKey(key: "xxxx")
 ```
-3. 获取对应ViewController
+3. 设置userId
+```
+FDDCloudManager.setFddUserId(userId: 123)
+```
+4. 获取对应ViewController
 ```
 /// 获取跳转的页面
 ///
@@ -31,7 +35,7 @@ FDDCloudManager.registKey(key: "xxxx")
 /// - Returns: 返回对应的VC，未获取到页面时为空
 let vc = FDDCloudManager.getActionVC(action: String, paths: [String : String]? = nil, query: [String: String]? = nil)
 ```
-4. 通过url获取ViewController
+5. 通过url获取ViewController
 ```
 /// 获取跳转的页面
 ///
@@ -40,12 +44,12 @@ let vc = FDDCloudManager.getActionVC(action: String, paths: [String : String]? =
 /// - Returns: 返回VC，未获取到页面时为空
 let vc = FDDCloudManager.getHomeVC(url: "url")
 ```
-5. 退出登录调用
+6. 退出登录调用
 ```
 FDDCloudManager.logOut()
 ```
 
-6. 微信原生分享
+7. 微信原生分享
 ```
 FDDCloudManager.shareEventBlock { (type, model) in
 if type == FDDCloudShareType.wechatSession {
