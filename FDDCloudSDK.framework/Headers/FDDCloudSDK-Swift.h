@@ -189,10 +189,14 @@ enum FDDCloudShareType : NSInteger;
 
 SWIFT_CLASS("_TtC11FDDCloudSDK15FDDCloudManager")
 @interface FDDCloudManager : NSObject
-/// 登录成功或者有FDD用户ID时候设置
-/// \param userId fddUserId
+/// \param userId fddUserID
 ///
-+ (void)setFddUserIdWithUserId:(NSInteger)userId;
+/// \param sdkToken 房多多提供的签名key
+///
+/// \param userId fddUserId
+/// 登录成功或者有FDD用户ID时候设置
+///
++ (void)setFddUserIdWithUserId:(NSInteger)userId sdkToken:(NSString * _Nonnull)sdkToken;
 /// 初始化注册SDK
 /// \param key key
 ///

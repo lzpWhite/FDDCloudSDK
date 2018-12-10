@@ -20,9 +20,9 @@ FDDCloudManager.setServerType(serverType: .production)
 /// - Parameter key: key
 FDDCloudManager.registKey(key: "xxxx")
 ```
-3. 设置userId
+3. 设置userId和sdktoken
 ```
-FDDCloudManager.setFddUserId(userId: 123)
+FDDCloudManager.setFddUserId(userId: 123456, sdkToken: "122")
 ```
 4. 获取对应ViewController
 ```
