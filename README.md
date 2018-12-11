@@ -22,7 +22,7 @@ FDDCloudManager.registKey(key: "xxxx")
 ```
 3. 设置userId和sdktoken
 ```
-FDDCloudManager.setFddUserId(userId: 123456, sdkToken: "122")
+FDDCloudManager.setFddUserId(userId: 123456)
 ```
 4. 获取对应ViewController
 ```

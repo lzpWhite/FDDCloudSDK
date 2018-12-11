@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         // 初始化SDK
         FDDCloudManager.registKey(key: "b25zIENlcnRpZmlj")
 
-        FDDCloudManager.setFddUserId(userId: 123456, sdkToken: "122")
+        FDDCloudManager.setFddUserId(userId: 123456)
 
         FDDCloudManager.shareEventBlock { (type, model) in
             if type == FDDCloudShareType.wechatSession {

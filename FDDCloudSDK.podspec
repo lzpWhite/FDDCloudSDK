@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = "FDDCloudSDK"
-s.version      = "0.1.1"
+s.version      = "0.1.2"
 s.summary      = "FDDCloudSDK.FrameWork."
 s.homepage     = "http://www.fangdd.com/shanghai"
 s.license      = "MIT"

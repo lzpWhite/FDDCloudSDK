@@ -191,12 +191,10 @@ SWIFT_CLASS("_TtC11FDDCloudSDK15FDDCloudManager")
 @interface FDDCloudManager : NSObject
 /// \param userId fddUserID
 ///
-/// \param sdkToken 房多多提供的签名key
-///
 /// \param userId fddUserId
 /// 登录成功或者有FDD用户ID时候设置
 ///
-+ (void)setFddUserIdWithUserId:(NSInteger)userId sdkToken:(NSString * _Nonnull)sdkToken;
++ (void)setFddUserIdWithUserId:(NSInteger)userId;
 /// 初始化注册SDK
 /// \param key key
 ///
