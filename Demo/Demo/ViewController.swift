@@ -15,11 +15,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // 设置环境 默认正式环境
-        FDDCloudManager.setServerType(serverType: .production)
+        FDDCloudManager.setServerType(serverType: .test)
         // 初始化SDK
         FDDCloudManager.registKey(key: "b25zIENlcnRpZmlj")
 
-        FDDCloudManager.setFddUserId(userId: 123456)
+        FDDCloudManager.setFddUserId(userId: 3010344)
 
         FDDCloudManager.shareEventBlock { (type, model) in
             if type == FDDCloudShareType.wechatSession {
