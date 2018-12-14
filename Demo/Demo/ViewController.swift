@@ -11,15 +11,14 @@ import FDDCloudSDK
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var userid: UITextField!
     @IBOutlet weak var textFile: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // 设置环境 默认正式环境
-        FDDCloudManager.setServerType(serverType: .test)
+        FDDCloudManager.setServerType(serverType: .production)
         // 初始化SDK
         FDDCloudManager.registKey(key: "b25zIENlcnRpZmlj")
-
-        FDDCloudManager.setFddUserId(userId: 3010344)
 
         FDDCloudManager.shareEventBlock { (type, model) in
             if type == FDDCloudShareType.wechatSession {
@@ -41,27 +40,22 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    @IBAction func cleanAction(_ sender: Any) {
-        // 退出登录调用
-        FDDCloudManager.logOut()
-    }
-    @IBAction func loginAction(_ sender: Any) {
-        publichAction("login")
-    }
-    @IBAction func loupanAction(_ sender: Any) {
-        publichAction("house", diac: ["id":"95913"])
-    }
-    @IBAction func fangyuanAction(_ sender: Any) {
-        publichAction("estate", diac: ["id":"6252623"])
-    }
-    @IBAction func homeAction(_ sender: Any) {
-        if let vc = FDDCloudManager.getVC(with: "http://d.fangdd.com/jsbridge") {
+    @IBAction func text(_ sender: Any) {
+        if let vc = FDDCloudManager.getVC(with: "http://d.fangdd.com/op/jsbridge") {
             let nc = UINavigationController(rootViewController: vc)
             self.present(nc, animated: false, completion: nil)
         }
     }
-
-    @IBAction func inputClick(_ sender: Any) {
+    @IBAction func cleanAction(_ sender: Any) {
+        // 退出登录调用
+        FDDCloudManager.logOut()
+    }
+    @IBAction func login(_ sender: Any) {
+        if let id = userid.text, !id.isEmpty {
+            FDDCloudManager.setFddUserId(userId: Int(id) ?? 0)
+        }
+    }
+    @IBAction func jump(_ sender: Any) {
         if let str = textFile.text, str.isEmpty == false {
             if str.hasPrefix("http") {
                 if let vc = FDDCloudManager.getVC(with: str) {
@@ -74,14 +68,6 @@ class ViewController: UIViewController {
                     self.present(nc, animated: false, completion: nil)
                 }
             }
-        }
-    }
-
-    func publichAction(_ action: String, diac: [String: String] = [:]) {
-
-        if let vc = FDDCloudManager.getActionVC(action: action, paths: diac) {
-            let nc = UINavigationController(rootViewController: vc)
-            self.present(nc, animated: false, completion: nil)
         }
     }
     
